@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Spell Checker</string>
+    <string name="sendButton">send</string>
 </resources>
