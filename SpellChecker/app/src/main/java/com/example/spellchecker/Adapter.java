@@ -15,15 +15,15 @@ public class Adapter extends ArrayAdapter<String> {
     String[] movieDesc;
     int[] moviePic;
     Context mContext;
-    //String[] moviePrem;
+    String[] moviePrem;
 
-    public Adapter(Context context, String[] movieName, String[] movieDesc, int[] moviePic) {
+    public Adapter(Context context, String[] movieName, String[] movieDesc, int[] moviePic, String[] moviePrem) {
         super(context, R.layout.listview_item);
         this.movieName = movieName;
         this.movieDesc = movieDesc;
         this.moviePic = moviePic;
         this.mContext = context;
-        //this.moviePrem = moviePrem;
+        this.moviePrem = moviePrem;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class Adapter extends ArrayAdapter<String> {
             mViewHolder.Pic = (ImageView) convertView.findViewById(R.id.imageView);
             mViewHolder.Name = (TextView) convertView.findViewById(R.id.textView);
             mViewHolder.Desc = (TextView) convertView.findViewById(R.id.textView2);
-            //mViewHolder.Prem = (TextView) convertView.findViewById(R.id.textView4);
+            mViewHolder.Prem = (TextView) convertView.findViewById(R.id.textView4);
 
 
 
@@ -53,7 +53,7 @@ public class Adapter extends ArrayAdapter<String> {
         mViewHolder.Pic.setImageResource(moviePic[position]);
         mViewHolder.Name.setText(movieName[position]);
         mViewHolder.Desc.setText(movieDesc[position]);
-        //mViewHolder.Prem.setText(moviePrem[position]);
+        mViewHolder.Prem.setText(moviePrem[position]);
 
 
         return convertView;
@@ -63,6 +63,6 @@ public class Adapter extends ArrayAdapter<String> {
         ImageView Pic;
         TextView Name;
         TextView Desc;
-        //TextView Prem;
+        TextView Prem;
     }
 }

@@ -66,7 +66,7 @@ public class Movie extends AppCompatActivity {
 
 
         ListView = (ListView) findViewById(R.id.listview);
-        Adapter myAdapter = new Adapter(Movie.this, movieNames, movieDesc, moviePic);
+        Adapter myAdapter = new Adapter(Movie.this, movieNames, movieDesc, moviePic, moviePrem);
         ListView.setAdapter(myAdapter);
         ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -75,7 +75,7 @@ public class Movie extends AppCompatActivity {
                 Intent.putExtra("movieName", movieNames[i]);
                 Intent.putExtra("movieDesc", movieDesc[i]);
                 Intent.putExtra("moviePic", moviePic[i]);
-                //Intent.putExtra("moviePrem", moviePrem[i]);
+                Intent.putExtra("moviePrem", moviePrem[i]);
 
 
                 startActivity(Intent);
