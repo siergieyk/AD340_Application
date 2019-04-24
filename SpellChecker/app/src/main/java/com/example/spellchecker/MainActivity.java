@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import android.content.Intent;
+
 
 public class MainActivity extends AppCompatActivity {
+
 
     protected Button myButton;
 
@@ -21,25 +24,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         myButton = (Button)findViewById(R.id.sendBtn);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+
+
+
+        Button buttonMovies = (Button)findViewById(R.id.btn1);
+        buttonMovies.setOnClickListener(new View.OnClickListener() {
+
+
             public void onClick(View v) {
-
-                Toast.makeText(getApplicationContext(),sent,Toast.LENGTH_LONG).show();
-
+                Intent intent = new Intent(MainActivity.this, Movie.class);
+                        startActivity(intent);
             }
+
+
         });
 
-        myButton = (Button)findViewById(R.id.btn1);
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(),toast1,Toast.LENGTH_LONG).show();
-
-            }
-        });
         myButton = (Button)findViewById(R.id.btn2);
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
     }
 

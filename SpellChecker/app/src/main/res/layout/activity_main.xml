@@ -62,7 +62,7 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="94dp"
-        android:text="Toast1"
+        android:text="MOVIES"
         app:layout_constraintBottom_toTopOf="@+id/btn3"
         app:layout_constraintEnd_toStartOf="@+id/btn2"
         app:layout_constraintStart_toStartOf="parent"
