@@ -13,6 +13,7 @@ public class DetailActivity extends AppCompatActivity {
     Toolbar Toolbar;
     ImageView ImageView;
     TextView TextView;
+    TextView TextViewDesc;
 
 
     @Override
@@ -22,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
 
         Toolbar = (Toolbar) findViewById(R.id.toolbar2);
         ImageView = (ImageView) findViewById(R.id.imageView2);
-        TextView = (TextView) findViewById(R.id.textView2);
+        TextViewDesc = (TextView) findViewById(R.id.textView6);
         TextView = (TextView) findViewById(R.id.textView4);
 
         Bundle mBundle = getIntent().getExtras();
@@ -30,7 +31,7 @@ public class DetailActivity extends AppCompatActivity {
 
             ImageView.setImageResource(mBundle.getInt("moviePic"));
             Toolbar.setTitle(mBundle.getString("movieName"));
-            TextView.setText(mBundle.getString("movieDesc"));
+            TextViewDesc.setText(mBundle.getString("movieDesc"));
             TextView.setText(mBundle.getString("moviePrem"));
         }
 
